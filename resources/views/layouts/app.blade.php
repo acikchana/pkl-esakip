@@ -5,22 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'E-SAKIP') | Diskominfo Kab. Malang</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @stack('head')
 </head>
 <body class="h-full bg-slate-50 antialiased">
     <div class="flex h-screen overflow-hidden">
 
         {{-- ============ SIDEBAR ============ --}}
         <aside class="w-64 flex-shrink-0 flex flex-col text-white"
-               style="background: linear-gradient(160deg, #0f2942 0%, #0a1f33 55%, #142d47 100%);">
+               style="background: linear-gradient(160deg, #0F5573 13%, #001B40 80%);">
 
             {{-- Logo --}}
             <div class="flex items-center gap-3 px-5 py-5 border-b border-white/10">
-                <div class="w-9 h-9 rounded-md bg-white/10 flex items-center justify-center">
-                    <img src="{{ asset('images/logo-malang.png') }}" alt="Logo" class="w-6 h-6 object-contain">
+                <div class="w-[22px] h-[27px] flex items-center justify-center">
+                    <img 
+                        src="{{ asset('images/logo-malang.png') }}" 
+                        alt="Logo" 
+                        class="w-[82px] h-[88px] object-contain"
+                    >
                 </div>
+
                 <div>
-                    <p class="font-bold text-sm leading-tight tracking-wide">E-SAKIP</p>
-                    <p class="text-[10px] text-emerald-400 leading-tight">DISKOMINFO KAB. MALANG</p>
+                    <p class="font-bold text-[26px] leading-tight tracking-wide">
+                        E-SAKIP
+                    </p>
+                    <p class="text-[10px] leading-tight text-[#F6FF00]">
+                        DISKOMINFO KAB. MALANG
+                    </p>
                 </div>
             </div>
 

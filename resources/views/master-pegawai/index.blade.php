@@ -76,50 +76,63 @@
 
                     {{-- Unit Kerja / Bidang --}}
                     <div>
-                        <label class="block text-xs font-bold text-slate-600 mb-1.5">
+                        <label class="block text-sm font-bold text-slate-600 mb-1.5">
                             UNIT KERJA / BIDANG <span class="text-rose-500">*</span>
                         </label>
-                        <select
+
+                        <input
+                            type="text"
                             x-model="form.unit_kerja"
-                            @change="form.jabatan = ''"
                             :disabled="!editMode"
                             required
-                            class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm text-slate-800 disabled:bg-slate-50 disabled:text-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-900/10 focus:border-slate-400">
-                            <option value="">Pilih Unit Kerja / Bidang</option>
-                            <template x-for="unit in unitKerjaOptions" :key="unit">
-                                <option :value="unit" x-text="unit"></option>
-                            </template>
-                        </select>
+                            class="w-full h-[43px] px-3.5 rounded-lg
+                                border-0 bg-[#EEF1F5]
+                                text-[15px] text-slate-500
+                                disabled:bg-[#EEF1F5]
+                                disabled:text-slate-500
+                                focus:outline-none focus:ring-2 focus:ring-slate-900/10">
                     </div>
 
-                    {{-- Jabatan (dependent ke Unit Kerja) --}}
+
+                    {{-- Jabatan --}}
                     <div>
-                        <label class="block text-xs font-bold text-slate-600 mb-1.5">
+                        <label class="block text-sm font-bold text-slate-600 mb-1.5">
                             JABATAN <span class="text-rose-500">*</span>
                         </label>
-                        <select
+
+                        <input
+                            type="text"
                             x-model="form.jabatan"
-                            :disabled="!editMode || !form.unit_kerja"
+                            :disabled="!editMode"
                             required
-                            class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm text-slate-800 disabled:bg-slate-50 disabled:text-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-900/10 focus:border-slate-400">
-                            <option value="">Pilih Jabatan</option>
-                            <template x-for="jab in jabatanOptions[form.unit_kerja] || []" :key="jab">
-                                <option :value="jab" x-text="jab"></option>
-                            </template>
-                        </select>
+                            class="w-full h-[43px] px-3.5 rounded-lg
+                                border-0 bg-[#EEF1F5]
+                                text-[15px] text-slate-500
+                                disabled:bg-[#EEF1F5]
+                                disabled:text-slate-500
+                                focus:outline-none focus:ring-2 focus:ring-slate-900/10">
                     </div>
+
 
                     {{-- Pangkat / Golongan --}}
                     <div>
-                        <label class="block text-xs font-bold text-slate-600 mb-1.5">
+                        <label class="block text-sm font-bold text-slate-600 mb-1.5">
                             PANGKAT / GOLONGAN <span class="text-rose-500">*</span>
                         </label>
+
                         <input
                             type="text"
                             x-model="form.pangkat_golongan"
                             :disabled="!editMode"
+                            placeholder="mis. Pembina / IV(a)"
                             required
-                            class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm text-slate-800 disabled:bg-slate-50 disabled:text-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-900/10 focus:border-slate-400">
+                            class="w-full h-[43px] px-3.5 rounded-lg
+                                border-0 bg-[#EEF1F5]
+                                text-[15px] text-slate-500
+                                placeholder:text-slate-400
+                                disabled:bg-[#EEF1F5]
+                                disabled:text-slate-500
+                                focus:outline-none focus:ring-2 focus:ring-slate-900/10">
                     </div>
 
                     {{-- Email Dinas --}}
