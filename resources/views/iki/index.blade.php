@@ -37,8 +37,8 @@
     <div class="bg-white rounded-xl border border-slate-200 p-6 mb-6">
         <h2 class="font-bold text-slate-800 mb-5">Data Pegawai</h2>
 
-        <div class="grid grid-cols-12 gap-5">
-            <div class="col-span-12 md:col-span-5">
+        <div class="flex flex-nowrap gap-5">
+            <div class="flex-[5]">
                 <label class="block text-xs font-bold text-slate-600 mb-1.5">PEGAWAI</label>
                 <input
                     type="text"
@@ -47,7 +47,7 @@
                     class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm text-slate-800 bg-slate-50 disabled:text-slate-500">
             </div>
 
-            <div class="col-span-12 md:col-span-4">
+            <div class="flex-[4]">
                 <label class="block text-xs font-bold text-slate-600 mb-1.5">NIP</label>
                 <input
                     type="text"
@@ -56,7 +56,7 @@
                     class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm text-slate-800 bg-slate-50 disabled:text-slate-500">
             </div>
 
-            <div class="col-span-12 md:col-span-3">
+            <div class="flex-[3]">
                 <label class="block text-xs font-bold text-slate-600 mb-1.5">TAHUN KINERJA</label>
                 <select
                     x-model="pegawai.tahun_kinerja"
